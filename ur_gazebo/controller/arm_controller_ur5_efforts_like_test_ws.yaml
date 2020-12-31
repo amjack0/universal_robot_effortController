@@ -1,0 +1,30 @@
+arm_controller:
+
+  joint_state_controller:
+   type: joint_state_controller/JointStateController
+   publish_rate: 50
+
+  controller_1:
+   type: effort_controllers/JointEffortController
+   joint: shoulder_pan_joint
+
+  controller_2:  
+   type: effort_controllers/JointEffortController
+   joint: shoulder_lift_joint
+
+  controller_3:
+   type: effort_controllers/JointEffortController
+   joint: elbow_joint
+
+  controller_4:
+   type: effort_controllers/JointEffortController
+   joint: wrist_1_joint
+
+  controller_5:
+   type: effort_controllers/JointEffortController
+   joint: wrist_2_joint
+
+  controller_6:
+   type: effort_controllers/JointEffortController
+   joint: wrist_3_joint
+

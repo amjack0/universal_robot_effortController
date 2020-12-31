@@ -1,0 +1,11 @@
+<launch>
+
+    <rosparam file="$(find ur_gazebo)/controller/arm_controller_ur5.yaml" command="load"/>
+
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+          output="screen" ns="/arm_controller" args="joint_state_controller controller_1 controller_2 controller_3 controller_4 controller_5 controller_6"/>
+
+    <!--node name="rqt_publisher" pkg="rqt_publisher" type="rqt_publisher" /-->
+    <!--node name="rqt_multiplot" pkg="rqt_multiplot" type="rqt_multiplot" /-->
+
+</launch>
